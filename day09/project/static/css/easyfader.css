@@ -1,0 +1,44 @@
+/* 对index.css的样式补充 */
+/* 内边距设置为百分比单位时 统一指宽度的百分比 */
+.fader{
+    padding-top: 57%;
+}
+
+
+.fader .slide{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.toppic li img{
+    height: 225px;
+}
+
+.prev, .next{
+    z-index: 4;
+}
+.prev:hover{
+    cursor: pointer;
+}
+.next:hover{
+    cursor: pointer;
+}
+
+.pager_list{
+    z-index: 4;
+}
+
+.pager_list li{
+    margin:0 5px;
+    opacity: 0.5;
+    text-indent: -9999px;
+}
+
+.pager_list li.active, .pager_list li:hover{
+    opacity: 1;
+    cursor: pointer;
+}

@@ -1,0 +1,346 @@
+/* 初始化 页面元素样式 */
+h1,h2,h3,p,body,ul,li{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    font:16px 'Courier New';
+}
+
+/*****************************header*********************************/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #555;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+nav{
+    width: 1240px;
+    height: 80px;
+    margin: 0 auto;
+    line-height: 80px;
+}
+/* logo */
+.logo{
+    font-size: 26px;
+    float: left;
+
+}
+/* 超链接有默认颜色 必须单独写出来才能覆盖 */
+.logo a{
+    color: #c1edf2;
+}
+nav>ul{
+    margin-left: 80px;
+    float: left;
+}
+
+nav>ul>li{
+    float: left;
+    padding: 0 20px;    
+}
+nav>ul>li>a{
+    color: #e5f2f2;
+}
+
+nav>ul>li>a:hover{
+    color: #fff;
+}
+
+nav>div{
+    float: right;
+}
+
+#login{
+    float: right;
+    margin-right: 50px;
+    color: #e5f2f2;
+}
+#register{
+    float: right;
+    color: #e5f2f2;
+}
+
+/*****************************main*********************************/
+main{
+    width: 1240px;
+    margin: 100px auto 0;
+}
+.banner{
+    width: 66%;
+    float: left;
+}
+.fader{
+    width: 100%;
+    position: relative;
+}
+.slide{
+    width: 100%;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+.slide .imginfo{
+    font-size: 26px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    padding-left: 40px;
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+}
+
+.fader_controls .prev{
+    width: 50px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left:50px;
+    top:50%;
+    margin-top:-40px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.fader_controls .next{
+    width: 50px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    right: 50px;
+    top:50%;
+    margin-top:-40px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.fader:hover .prev{
+    opacity: 0.8;
+    left:5px;
+}
+.fader:hover .next{
+    opacity: 0.8;
+    right: 5px;
+}
+
+.pager_list{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    /* margin: 0 auto; */
+}
+.pager_list li{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* margin: 0 auto; */
+    display: inline-block;
+}
+
+
+/* 右侧toppic内容 */
+.toppic{
+    width: 32%;
+    float: right;
+}
+
+.toppic li{
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+/* 降低遮罩黑色背景的程度 受黑色背景影响 图片变暗 */
+.toppic li i{
+    display: block;
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+/* 遮罩黑色背景 则图片显示变亮*/
+.toppic li:hover i{
+    opacity: 1;
+}
+
+.toppic li img{
+    width: 100%;
+    height: 222px;
+}
+
+.toppic li div{
+    width: 100%;
+    font-size: 16px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 10px 20px;
+    bottom: 12%;
+    /* left: 0;
+    right: 0; */
+}
+
+
+.toppic li span{
+    font-size: 12px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    text-align: center;
+    top:20px;
+    left:20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.toppic li:last-child{
+    margin-top: 15px;
+}
+
+.toppic li div{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+}
+.toppic li span{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+/* 找到最后一个子元素li */
+.toppic li:last-child{
+    margin-top:15px;
+}
+
+body{
+    background-color: #f2f2f0;
+} 
+
+.clear{
+    clear: both;
+    margin-bottom: 20px;
+}
+
+/***********************************博客列表****************************************/
+.blogsbox{
+    width: 100%;
+}
+
+.blogs{
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.blogs .blogtitle{
+    font-size: 20px;
+    color: #555;
+}
+.blogs .blogtitle a:hover{
+    color: #337ab7;
+}
+
+.blogpic{
+    width: 30%;
+    height: 170px;
+    float: left;
+    overflow: hidden;
+    margin:10px 20px 0 0;
+}
+
+.blogpic img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.blogpic img:hover{
+    transform: scale(1.1);
+}
+
+.blogs .blogtext{
+    font-size: 14px;
+    color: #566573;
+    margin-top: 20px;
+
+}
+
+.blogs ul{
+    float: left;
+}
+
+.blogs ul li{
+    float: left;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 18px;
+    margin: 30px 15px 0 0;
+    background-image: url('../images/auicon.jpg');
+    background-repeat: no-repeat;
+}
+.blogs .lmname{
+    background-position-y: -25px;
+}
+.blogs .timer{
+    background-position-y: -45px;
+}
+.blogs .view{
+    background-position-y: -65px;
+}
+.blogs .like{
+    background-position-y: -85px;
+}
+.blogs ul li a{
+    
+    color: #748594;
+}
+
+/********************************footer***************************************/
+
+
+footer {
+    width: 100%;
+    background-color: #555;
+    padding: 20px 0;
+    color: #a5a5a4;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+}
+footer a{
+    color: #a5a5a4;
+}
+footer a:hover{
+    color:#c1edf2;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        // (function (){
+        //     document.write('hello world')
+        // })()
+        
+
+        console.log(fun)
+        console.log(fun1)
+        // function fun(name){
+        //     document.write('hello' +name)
+        // }
+        // fun('QTX'); 
+        
+
+        // 只能在下部执行调用
+        var fun1 = function(){
+            document.write('hello world')
+        }
+        fun1()
+    </script> -->
+    
+    <!-- <button id = 'btn'>
+        click me 
+    </button>
+    <script>
+        var btn = document.getElementById('btn');
+        console.log(btn.id)
+        btn.onclick = function(){
+            alert('hello world')
+        }
+
+        function fun(){
+            alert('hello world')
+        }
+        btn.click=fun
+    </script> -->
+
+    <script>
+        var a= 1
+        function fun(){
+            // var a=10
+            a=10
+            b=20
+        }
+        fun()
+        console.log(a)
+        console.log(b)
+
+        var a=1
+        function fun(){
+            var a=10;
+            function inner(){
+                a++;  
+                return a;
+                // a=11
+            }
+            return inner()
+        }
+        fun()
+        console.log(a)
+
+        var a=1
+        function fun(){
+            var a=10;
+            return function(){
+                a++;
+                return a
+            }
+        }
+        console.log(fun()())
+        console.log(a)
+    </script>
+</body>
+</html>

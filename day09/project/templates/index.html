@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/blogs.data.js"></script>
+    <script src="../static/js/fader.data.js"></script>
+    <script src="../static/js/jquery.easyfader.min.js"></script>
+    <script src="../static/js/index.js"></script>
+    <link rel="stylesheet" href="../static/css/easyfader.css">
+</head>
+<body>
+    <!-- <div id="header"></div>
+    <div id="main"></div>  
+    <div id="footer"></div> -->
+
+    <header>
+        <nav>
+            <h1 class="logo">
+                <!-- #访问页面顶部 但不刷新页面 -->
+                <a href="#">个人博客</a>
+            </h1>
+            <ul>
+                <li>
+                    <a href="#">网站首页</a>
+                </li>
+                <li>
+                    <a href="#">文章列表</a>
+                </li>
+                <li>
+                    <a href="#">我的相册</a>
+                </li>
+                <li>
+                    <a href="#">留言</a>
+                </li>
+                <li>
+                    <a href="#">关于我</a>
+                </li>
+                <li>
+                    <a href="#">发表博客</a>
+                </li>
+            </ul>
+            <div>
+                <!-- 按顺序右浮动 注册先靠右 然后 登录再靠右 -->
+                <a href="#" id="register">注册</a>
+                <a href="#" id="login">登录</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <!-- 轮播图 -->
+            <div class="banner">
+                <ul class="fader">
+                    <!-- <li class="slide">
+                        <a href="#">
+                            <img src="../static/images/banner01.jpg" alt="banner1">
+                            <span class="imginfo">爬虫微课5小时 Python学习路线</span>
+                        </a>
+                        
+                    </li> -->
+                    <li class="fader_controls">
+                        <div class="page prev" data-target="prev">&lt;</div>
+                        <div class="page next" data-target="next">&gt;</div>
+                        <ul class="pager_list">
+                            <!-- <li></li> -->
+                        </ul> 
+
+                    </li>
+                </ul>
+    
+            </div>
+
+            <ul class="toppic">
+                <li>
+                    <a href="#">
+                        <i>
+                            <img src="../static/images/toppic01.jpg" alt="">
+                        </i>
+                        <div>linux升级py3，安装pip,sun</div>
+                        <span>Linux</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>
+                            <img src="../static/images/toppic02.jpg" alt="">
+                        </i>
+                        <div>精通Python编程——Python深入浅出教程</div>
+                        <span>Python</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+        <!-- 博客列表 -->
+        <div class="blogsbox">
+            <!-- <div class="blogs">
+                <h3 class="blogtitle">
+                    <a href="#">python在人工智能中的优势</a>
+                </h3>
+                <div class="blogpic">
+                    <a href="#">
+                        <img src="../static/images/a.jpg" alt="">
+                    </a>
+                </div>
+                <p class="blogtext">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ducimus officiis delectus reprehenderit totam temporibus molestias saepe similique quis voluptates fugit, ullam voluptatum eligendi impedit vero voluptatem error commodi provident.
+                </p>
+                <ul>
+                    <li class="author"><a href="#">皮皮鲁</a> </li>
+                    <li class="lmname"><a href="#">学无止境</a></li>
+                    <li class="timer"><a href="#">2020-01-01</a></li>
+                    <li class="view"><a href="#">34567</a></li>
+                    <li class="like"><a href="#">9999</a></li>
+                </ul>
+            </div>  -->
+        </div>
+        
+    </main>
+    <footer>
+        <div>
+            Design by
+            <a href="#">个人博客</a>
+            <a href="#">备xxxxxxxxxxxxxxx案</a>
+        </div>
+    </footer>
+</body>
+</html>

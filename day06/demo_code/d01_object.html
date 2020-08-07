@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        var obj = {uname:"QTX",age:18};
+        console.log(obj)
+        console.log(obj.uname,obj.age);
+        console.log(obj['uname']);
+
+        //i属性名 obj[i]属性值
+        for(var i in obj){
+            console.log(i,obj[i]);
+        }
+        
+        // [{"name":"maria","age":18},{},{}...]
+        
+        //json--js文本标记方式 属性名严格加双引号， 一种格式，用于前后端传输数据
+        var json = {"uname":"QTX","age":18};
+        console.log(obj)
+        console.log(json)
+    </script>
+</body>
+</html>
+

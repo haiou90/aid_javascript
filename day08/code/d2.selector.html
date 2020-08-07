@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找页面元素的方式</title>
+</head>
+<body>
+    <div>
+        <h1 id="title">登鹳雀楼</h1>
+        <ul>
+            <li class="item">白日依山尽</li>
+            <li class="item">黄河入海流</li>
+            <li >欲穷千里目</li>
+            <li >更上一层楼</li>
+        </ul>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('#title').css('color','red').css('text-align','center');
+        $('.item').css('background-color','yellow');
+        //找到item类后面的第一个兄弟元素 如果是li
+        $('.item + li').css('font-size','30px').css('color','red');
+
+        //因为不相邻 所以不能找到
+        $('#title+li').css('color','blue')
+
+        //通用兄弟选择器
+        $('.item~').css('text-align','center')
+
+        //
+        // $('ul li').css('text-align','center')
+        $('.item:first').css('text-align','center')
+        $('.item:last').css('text-align','left')
+        $('li:odd').css('font-size','40px')
+        $('li:even').css('font-size','50px')
+
+        $('li:eq(3)').css('background-color','pink')
+        $('li:lt(3)').css('background-color','orange')
+    </script>
+</body>
+</html>

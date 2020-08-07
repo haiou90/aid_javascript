@@ -1,0 +1,19 @@
+/* 外部样式表注释 */
+h1{
+    /* 样式声明 */
+    background-color:red;
+    text-align: center;
+    /* 样式声明2 */
+    color:white;
+    
+    font-size:64px;
+}
+h2{
+    /* 样式声明 */
+    background-color:green;
+    text-align: center;
+    /* 样式声明2 */
+    color:white;
+    
+    font-size:32px;
+}

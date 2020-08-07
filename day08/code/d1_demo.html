@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1" style="color: red;"> hello </div>
+    <!-- <div id="d2" style="color: red;"> </div> -->
+    <p id="p1"></p>
+    <span id="s1"></span>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // var div = document.getElementById('d1')
+        // console.log(div)
+        // // div.innerHTML = 'hello'
+        // //js 对象-->jq对象
+        // $(div).html('hello world') 
+        // //this 当前的js 对象   $(this)才能使用jq提供的方法
+
+        // var $div = $('#d1')
+        // console.log($div)
+        // // $div.html('hello')
+
+        // //jq对象中索引值为0的位置保持着js对象
+        // //jq对象 -->js对象
+        // $div[0].onclick = function(){
+        //     alert('hello world')
+        // }
+
+        // //封装查找功能 比较麻烦
+        // // function $$(id){
+        // //     return document.getElementById(id)
+        // // }
+        // // $$('d1').innerHTML = 'HELLO'
+
+        // var div = document.getElementById('d1')
+        // console.log(div)
+        // $(div).html('hello world')
+        // // div.onclick = function () {
+        // //     alert('hello world')
+        // // }
+        // $(div).click(function () {
+        //     alert('hello world')
+        // })
+
+        $('div').html('hello world')
+        $('div').click(function () {
+            alert('hello world')
+            
+        })
+    </script>    
+</body>
+</html>
+

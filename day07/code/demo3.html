@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过location获取数据</title>
+</head>
+<body>
+    <script>
+        //当前地址file:///Users/mac/Desktop/month03/day07/code/demo3.html?name=qtx&age=18
+        //获取name和age在页面上显示
+        var url = location.href;
+        //将url按？分隔  ？前是地址   ？后是数据
+        var data = url.split('?')[1];
+        var datas = data.split('&');
+        for (var i in datas){
+            var res = datas[i].split('=');
+            console.log(`${res[0]} ${res[1]}`)
+        }
+    </script>
+</body>
+</html>

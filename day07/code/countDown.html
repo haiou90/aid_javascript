@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        //计算当前时间距离今天中午12:00还有多久 显示在页面上
+        //时：分：秒
+        function addZero(num){
+            return num>10?num+'':'0'+num
+        }
+
+        var div = document.getElementsByTagName('div')[0]
+        var time = setInterval(function(){
+        var start = new Date();
+        var end = new Date();
+        end.setHours('18');
+        end.setMinutes('0');
+        end.setSeconds('0');
+        var leftTime =  end -start;
+        if (leftTime<=0){
+            clearInterval(time);
+            div.inner  = '倒计时结束 请重新开启计时';
+            return
+        }
+        var time = parseInt(leftTime/1000)
+        var h = addZero(parseInt(time/3600)) 
+        var m = addZero(parseInt(time%3600/60))
+        var s = addZero(time%60)                        
+    
+      
+        div.innerText = `${h}:${m}:${s}` },1000)  
+    </script>
+</body>
+</html>

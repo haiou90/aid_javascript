@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS的使用方式</title>
+</head>
+<body>
+    <div onclick="alert('hello world')">
+        click me!
+    </div>
+    <!-- 事件放入队列监控 一旦触发 传递给js等待执行 -->
+    <button onclick="alert('hello world')">
+        click me!
+    </button>
+    
+    <!-- 文档内嵌或外部链接二选一 同时用链接会覆盖内嵌代码 -->
+    <script>
+        // js代码
+        // 在浏览器控制台输出一段内容 类似print
+        // console.log('hello world');
+        // var a;
+        // a=10;
+        // var b=20;
+        // var m,n,k;
+        // var j=10,c=20;
+
+        // const PI=3.14;
+
+        // var n=1.5e3;
+
+        // var a = null;
+        // a=10;
+
+        var n='asdf'
+        console.log(typeof n);
+    </script>
+    <script src="../code/demo.js"></script>
+</body>
+</html>

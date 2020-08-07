@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作页面内容</title>
+</head>
+<body>
+    <input type="text" name="" id="key">
+    <h1></h1>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        //当用户输入内容时 将用户输入的内容放在下方的h1中显示
+        
+        //oninput当用户输入内容时触发的事件
+        // $('#key').input(function(){
+        //     console.log($('#key').val())
+        // })
+
+
+        $('#key').change(function(){
+            console.log($('#key').val())
+            // $('h1').html($('#key').val())
+            $('h1').text($('#key').val())
+        })
+    </script>
+</body>
+</html>
+

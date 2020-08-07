@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 1.2 内嵌样式   2.1 标签选择器 权重为1 (范围太广基本不用)*/
+        div{color: red; background-color:grey; font-size: 32px; text-align: center}
+
+        /* 2.2 id选择器 权重为100，因为必须唯一，不重复，用一个少一个，也基本不用 */
+        #title{
+            color:blue; background-color: grey
+        }
+
+        /* 2.3 类选择器 权重为10 */
+        .green{
+            color:green;
+        }
+
+        .yellow{
+            background-color: yellow
+        }
+
+        /* 2.4标签选择器+类选择器 权重为11 */
+        div.red{
+            font-size: 40px;
+        }
+
+        /* 2.5群组选择器 权重为1*/
+        h1,p,ul,li{
+            /* 清除元素默认的边距 */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 2.6子代选择器 + 伪类选择器 */
+        ul li{
+            font-size: 30px;
+        }
+        ul>li{
+            color: red;
+            /* transition 过渡 当指定样式的值发生改变时，可以让值的改变在规定时间内完成而不是马上完成 */
+            transition: all 0.5s;
+        }
+        ul>li:hover{
+            color: aqua;
+        }
+        li a:link{
+            font-style: italic
+        }
+        
+        /* 2.7后代选择器 */
+        body>ul>li{
+            text-align: center;
+        }
+        /* body li{
+            font-size: 25px;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- 1.1 行内样式  权重为1000 -->
+    <!-- <div style="color: red; background-color:green; font-size: 32px"> -->
+    
+
+    <!-- 2.1 标签选择器 -->
+    <div>
+        this is a test string
+    </div>
+
+    <!-- 2.2 id选择器 -->
+    <div id="title">fixed
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt debitis neque nisi adipisci, unde illum quisquam dignissimos a nemo eveniet consequatur sequi consectetur! Sunt dolore aut eius hic excepturi vero.
+    </div>
+   
+    <!-- 2.3 类选择器 -->
+    <div class="green yellow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consectetur est perspiciatis officiis vel sapiente? Ipsum, doloremque deserunt unde ipsam sed cum temporibus assumenda nulla odio totam, adipisci, laboriosam consequatur.
+    </div>
+
+    <!-- 2.4标签选择器+类选择器结合 -->
+    <div class="green">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consectetur est perspiciatis officiis vel sapiente? Ipsum, doloremque deserunt unde ipsam sed cum temporibus assumenda nulla odio totam, adipisci, laboriosam consequatur.
+    </div>
+
+    <!-- 2.6+2.7子代/后代选择器 -->
+    <ul>
+        <li><a href="http://www.4399.com">锄禾日当午</a></li>
+        <li>汗滴禾下土</li>
+        <li>谁知盘中餐</li>
+        <li>粒粒皆辛苦
+            <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+        </li>
+    </ul>
+
+</body>
+</html>

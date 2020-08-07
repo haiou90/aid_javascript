@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var isSave = true;
+        var isChecked = false;
+        console.log(Number("abc"))
+        console.log(Number(undefined))
+        console.log(Number(null))
+        console.log(Number(true))
+        console.log(Number(false))
+        console.log(parseInt('123abc')) 
+        console.log(parseInt('123.456'))
+        console.log(parseInt(123.456))
+        console.log(parseFloat('123.456'))
+        console.log(parseFloat('123.456.789'))
+        
+        console.log(true>null);
+        console.log('18'>1);
+        console.log('18'>'abc');
+        console.log('1'.charCodeAt());
+        console.log('18' == 18);//18 == 18
+        console.log(0 == false);
+        // null在做等值比较时 不发生转换
+        console.log(null == 0);
+        console.log(null == undefined);
+        console.log(typeof(undefined)) 
+        console.log(typeof(null)) 
+
+        // var arr = Array(5,4,3,2,1)   //Array函数
+        // console.log(arr);
+        // console.log(typeof(arr))
+        var arr = new Array(5,4,3,2,1); //对象  创建方式一
+        console.log(arr);
+        console.log(typeof(arr))
+        // var arr = [1,2,3,4,5];  //创建方式二
+        // console.log(arr);
+    </script>
+</body>
+</html>
+

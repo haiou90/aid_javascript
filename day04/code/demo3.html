@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比较运算符</title>
+</head>
+<body>
+    <script>
+        console.log('a'>'b')
+        console.log('a'.charCodeAt()) 
+        
+        console.log(true>null)
+        console.log('18'>'abc')
+        console.log('z'>undefined)
+        console.log(true>undefined)
+        console.log(null>undefined)
+
+        // null在作比计较时 不发生转换
+        console.log(null==0)
+        console.log(null==undefined)
+
+        console.log(null===undefined)
+        console.log('18' !== 18)
+
+        // var year = prompt('请输入一个年份')
+        // // year % 4 == 0 and year % 100 !=0 or year % 400 ==0
+        // console.log(year % 4 == 0 && year % 100 !=0 || year % 400 ==0)
+
+        // var age  = prompt('请输入一个年龄')
+        // console.log(age>=18 && age <=30)
+
+        // console.log(age>=18 && console.log(x))
+
+        // var a=10;
+        // var b=20;
+        // a>b?console.log(a):console.log(b)
+        // var year  = prompt('请输入一个闰年')
+        // year % 4 == 0 && year % 100 !=0 || year % 400 ==0?console.log('闰年'):console.log('平年')
+
+        var num=prompt('请输入一个数字')
+        num >=0 && num < 10? console.log('0'+num):console.log(num)
+        // console.log(true,null,undefined,1,'a')
+        // console.log(true)
+        // console.log(null)
+        // console.log(undefined)
+        // console.log(1)
+        // console.log('a')
+        // console.log('10'+true)
+        // console.log('10'+undefined)
+        // console.log('10'+null)
+        // console.log(10+false)
+        // console.log(10+undefined)
+        // console.log(10+'abc')
+        // console.log(10+null)
+
+    </script>
+</body>
+</html>

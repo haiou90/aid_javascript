@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动</title>
+    <style>
+        /* 浮动后块元素可以并排显示 */
+        div{
+            width: 200px;
+            height:300px;
+            /* float: left; */
+        }
+        .d1{
+            background-color: red;
+            float: left;
+        }
+        .d2{
+            background-color: green;
+            float: right;
+        }
+        .d3{
+            background-color: blue;
+            float: left;
+        }
+        /* 浮动后行内元素可以设置宽高 */
+        span{
+            width:200px;
+            height: 300px;
+            background-color: yellow;
+            float:left
+        }
+        ul,li{
+            list-style: none;
+        }
+        /* 子元素全部设置浮动,导致父元素高度为0 */
+        li{
+            /* background-color: aquamarine; */
+            border:5px solid #000;
+            /* 方案1 固定高度 除导航条外不常用*/
+            /* height: 300px; */
+
+            /* 方案3 重新计算父元素高度，必须加在父元素上*/
+            /* overflow:hidden;             */
+        }
+        p{
+            /* 方案2.1常用： 清除浮动的影响，不是浮动效果 */
+            margin: 0;
+            /* 实际使用时单独建立.clear类 */
+            clear:both;
+        }
+        /* 方案2.2 */
+        .clear{
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <li>
+        <div class='d1'></div>
+        <div class='d2'></div>
+        <div class='d3'></div>
+        <span></span>
+        
+        <!-- 方案2.1  -->
+        <!-- <p></p> -->
+        <!-- 方案2.2 -->
+        <p class="clear"></p>
+    </li>
+</body>
+</html>

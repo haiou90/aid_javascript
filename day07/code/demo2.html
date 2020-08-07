@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>右下角小广告</title>
+    <style>
+        div{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+            position: fixed;
+            right: 3px;
+            bottom: -301px;
+            /* display: none;  */
+            transition: all 1s;
+        }
+        .show{
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="$"></div>
+    <script>
+        var div = document.getElementById('$')
+        var timer = setTimeout(function(){
+            div.setAttribute('class','show')
+        },3000)
+    </script>
+    
+</body>
+</html>

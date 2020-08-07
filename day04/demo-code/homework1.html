@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 方案一 用浮动 */
+        span{
+            float: left;
+        }
+        i{
+            width :0px;
+            height: 0px;
+            border:10px solid transparent;
+            float: left;
+            border-top-color: black;
+            margin-top:5px; 
+
+        }
+        
+        /* 方案二 用定位 */
+        div{
+            position: relative;
+        }
+        span{
+            color: #666;
+        }
+        i{
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-top-color:#000;
+            position: absolute;
+            top:9px;
+            /* float: left;
+            margin-top: 5px; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>上海</span>
+        <i></i>
+    </div>
+</body>
+</html>

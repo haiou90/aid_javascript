@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title> 
+    <style>
+        #slideBar{
+            width: 739px;
+            height: 419px;
+            position: relative;
+        }
+      
+        #slideBar>img{
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+            transition: all 1s;
+        }
+      
+        #slideBar>img.active{
+            opacity: 1;
+            z-index: 2;
+        }
+        #ll,#rr{
+            position: absolute;
+            z-index: 6;
+            top:50%;
+            margin-top: -20px;
+        }
+        #rr{
+            right: 0;
+        }
+    </style> 
+</head>
+<body>
+    <div id='slideBar'>
+        <img class='item active' src="../imgs/gm1-6.jpg" title="0" alt="">
+        <img class="item" src="../imgs/gm2-6.jpg" title="1" alt="">
+        <img class="item" src="../imgs/gm3-6.jpg" title="2" alt="">
+        <img class="item" src="../imgs/gm4-6.jpg" title="3" alt="">
+        <img class="item" src="../imgs/gm5-6.jpg" title="4" alt="">
+        <div>
+            <img id="ll" src="../imgs/l1-6.png" alt="">
+            <img id="rr" src="../imgs/r1-6.png" alt="">
+        </div>
+    </div>
+    <script>
+        var ll = document.getElementById('ll');
+        var rr = document.getElementById('rr');
+        var img = document.getElementsByClassName('item')
+        for (var i in img){
+            console.log(img[i])
+        }
+        var i = 0;
+        ll.onclick = function(){
+            img[i].className = 'item';
+            i--;
+            if (i==-1){
+                i=img.length-1    
+            }
+            img[i].className = 'item active'
+        }
+        rr.onclick = function(){
+            img[i].className = 'item';
+            i++;
+            if (i==img.length){
+                i=0    
+            }
+            img[i].className = 'item active'
+        }
+       
+        var div = document.getElementById('slideBar');
+        var timeId = setInterval(rr.onclick,2000)
+        div.onmouseover = function(){
+            clearInterval(timeId);
+        }
+        div.onmouseout = function(){
+            timeId = setInterval(rr.onclick,2000)
+        }
+    </script>
+</body>
+</html>
+

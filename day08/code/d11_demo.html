@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#d1').css('color','red')
+        })
+    </script>
+</head>
+<body>
+    <div id='d1'></div>
+    <script>
+        $(function(){
+            $('body').on('click','#btn',function() {
+                alert('hello')
+            })
+            $('body').append('<button id="btn">click me </button>')            
+        })
+    </script>
+    <script>
+        $(function(){
+            $('#d1').html('你好')
+        })
+    </script>
+</body>
+</html>

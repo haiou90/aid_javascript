@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button class="btn1" name="隐藏">隐藏</button>
+    <button class="btn2">上推</button>
+    <button class='btn3'>淡雅</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('.btn1').click(function(){
+            if ($(this).text()=='隐藏'){
+                $('div').hide(3000,function(){
+                    $('.btn1').text('显示');
+                });
+                
+            }else{
+                $('div').show(3000,function(){
+                    $(this).text('隐藏');
+                });
+            }
+        })
+        $('.btn2').click(function(){
+            if ($(this).text()=='上推'){
+                $('div').slideUp(3000,function(){
+                    $('.btn2').text('下拉');
+                });
+                
+            }else{
+                $('div').slideDown(3000,function(){
+                    $(this).text('下拉');
+                });
+            }
+        })
+        $('.btn3').click(function(){
+            if ($(this).text()=='淡隐'){
+                $('div').fadeIn(3000,function(){
+                    $('.btn3').text('淡现');
+                });
+                
+            }else{
+                $('div').fadeOut(3000,function(){
+                    $(this).text('淡隐');
+                });
+            }
+        })
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="btn1">隐藏</button>
+    <button id="btn2">上推</button>
+    <button id="btn3">淡隐</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('#btn1').click(function(){
+            if ($(this).text()=='隐藏'){
+                $('div').hide(3000,function(){
+                $('#btn1').text('显示')
+                })
+            }else{
+                $('div').show(3000,function(){
+                $('#btn1').text('隐藏')
+                })
+            }   
+        })
+
+        $('#btn2').click(function(){
+            if ($(this).text()=='上推'){
+                $('div').slideUp(3000,function(){
+                $('#btn2').text('下拉')
+                })
+            }else{
+                $('div').slideDown(3000,function(){
+                $('#btn2').text('上推')
+                })
+            }   
+        })
+
+        $('#btn3').click(function(){
+            if ($(this).text()=='淡隐'){
+                $('div').fadeOut(3000,function(){
+                $('#btn3').text('淡现')
+                })
+            }else{
+                $('div').fadeIn(3000,function(){
+                $('#btn3').text('淡隐')
+                })
+            }   
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 200px;
+            height: 200px;
+
+            border:5px solid red;
+            border-left-style: double;
+            transparent优于none和white
+            border-bottom-color:transparent;
+        }
+        
+        滑动鼠标出现底边
+        div:hover{
+            border-bottom: 5px solid red;
+        } */
+        p{
+            width: 300px;
+            height: 100px;
+            border:5px solid blue;
+             /*border-radius不是必须使用border属性，其他的如background也可以  */
+            /* border-radius: 50px; */
+            
+            /* 长宽相同时 生成圆形 */
+            border-radius: 50%;
+
+            /* 取值规律 */
+            /* 顺序：上右下左 顺时针 */
+            border-radius: 5px 25px 45px 65px;
+            /* 顺序：上右下 左与对角线的右圆角一致 */
+            border-radius: 5px 25px 45px;
+            /* 顺序：上右 下与上对应，左与右对应 */
+            border-radius: 5px 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <p></p>
+</body>
+</html>

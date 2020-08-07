@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bom</title>
+</head>
+<body>
+    <button id='btn1'>启动定时器</button>
+    <button id='btn2'>停止定时器</button>
+    <script>
+         //周期性定时器 (事件优先级高于定时器优先级 事件由用户触发)
+        var timeId = null;
+        var btn1 = document.getElementById('btn1')
+        btn1.onclick = function(){
+            timeId = setInterval(function(){
+            console.log('hello')
+        },1000)
+        }
+        // var  timeId = setInterval(function(){
+        //     console.log('hello')
+        // },1000)
+
+        var btn2 = document.getElementById('btn2')
+        btn2.onclick = function(){
+            clearInterval(timeId);
+        }
+       
+        //一次性定时器
+        // btn1.onclick = function(){
+        //     var timer = setTimeout(function(){
+        //     alert('hello')
+        // },1000)
+        // }
+        
+        // var arr=[1,2,3,4];
+        // alert('hello')
+        // prompt('输入')
+        // var res = confirm('确定要删除吗')
+        // console.log(res)
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>string对象</title>
+</head>
+<body>
+    <script>
+        //创建
+        // var str1 = 'hello';              //string 只有此方法，不用下面两种方法
+        // var str2 = new String('hello');  //新的字符串对象，与str地址相同
+        // var str3 = new String('hello');  //再创建新的字符串对象
+        // console.log(str1)
+        // console.log(str2)
+        // console.log(str1 == str2) //true  使用地址相同
+        // console.log(str2 == str3) //false 开辟新的空间存储，存储地址不同
+        
+        //索引查找
+        // var str1 = 'hello';              //string 只有此方法，不用下面两种方法
+        //             01234
+        // console.log(str1[5]='1');  //返回值为1，没有改变字符串
+        // console.log(str1);   //hello 通过索引给字符串赋值 不改变原字符串
+                
+        //遍历，每次遍历结果都是索引
+        // var str1 = 'hello';    //string 
+        // for(var i in str1){
+        //     console.log(i,str1[i])
+        // }
+        
+        // var str1 = 'hello';    
+        //方法1：大小写
+        // // console.log(str1.toUpperCase()); HELLO
+        // // console.log(str1);  hello
+
+        //方法2 指定下标字符编码
+        // console.log(str1.charAt(3));  l
+        // console.log(str1.charCodeAt(1));  101 
+
+        //方法3:指定字符的下标（@）
+        // console.log(str1.indexOf('ll'));//2
+        // console.log(str1.indexOf('a'));//-1
+        // // 要查找的字符串  起始位置索引为3
+        // console.log(str1.indexOf('ll',3));//-1 未找到
+
+        //方法4：截取字符串
+        // var str1 = 'This is a test string';
+        // console.log(str1.substring(4,10)) //10代表索引终值
+        // console.log(str1.substr(4,10))  //10代表长度
+
+        //方法5：分割字符串 or 字符串转数组
+        var email = 'shibw@tedu.cn';
+        console.log(email.split('@'));
+        var today = '2020-01-01'; 
+        console.log(today.split('-'));       
+    
+    </script>
+</body>
+</html>

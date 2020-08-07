@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* display  调整元素的显示方式 */
+        /* 取值  block 块元素 默认独占一行，可以调整宽高 */
+        /* inline 行内元素 可以和其他元素共行显示，不能调整宽高,只能根据内容确定大小(hello) */
+        /* inline-block 行内块元素 可以调整宽高也可以和其他元素共行显示 */
+        /* none 隐藏元素 */
+
+        /* 演示1：div块元素与span行内元素共同显示 */
+        .red{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* span:改block基础上再调整为 div、span都是行内块，两者可以横着排列 */
+            display:inline-block
+        }
+        /* 如果不设置block span内为空的不占空间，所以无法显示 */
+        span{
+            display: block;
+        }
+        
+        /* 演示2 完全隐藏span, span.red 与.red组合使用效果，如登录框点击前隐藏*/
+        /* .red{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display:inline-block
+        }
+        span.red{
+            display: none;
+        } */
+       
+
+        /* 演示3 尺寸  body默认情况下为0 则.red按百分比结果为空*/
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+        } 
+        .red{
+            width: 50%;
+            height: 100%;
+        }
+        
+        /* 演示4 尺寸 高度尽量不用百分比 直接取值*/
+        .red{
+            width: 50%;
+            height: 200px;
+        }
+        .inner{
+            width: 100%;
+            /* 会覆盖父元素 */
+            height: 100%;
+            /* 会覆盖父元素一半 */
+            height: 100px;
+            background-color: aqua;
+        } 
+
+        /* 演示5:字体尺寸 默认16px rem参照根元素:html em参照父元素:body */
+        html{
+            font-size:16px;
+        }
+        body{
+            font-size: 16px;
+        }
+        div{
+            /* font-size: 0.8em; */
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 演示1 演示2 -->
+    <div class="red"></div>
+    <span class="red"></span>
+
+    <!-- 演示3 +演示4 -->
+    <div class="red">
+        <div class="inner"></div>
+    </div>
+
+    <!-- 演示5 -->
+    <div>
+        普普通通的文字
+    </div>
+</body>
+</html>
